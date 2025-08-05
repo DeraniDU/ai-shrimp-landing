@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
@@ -25,13 +27,16 @@ export default function Home() {
         </section>
 
         {/* Feature 2: Automated Feed System */}
-        <section className="bg-white rounded-xl border border-gray-200 shadow p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
-          <Image src="/window.svg" alt="Automated Feed System" width={72} height={72} className="mb-4" priority />
-          <h2 className="text-xl font-bold mb-2">Automated Feed System</h2>
-          <p className="text-gray-600">
-            AI-driven feeding schedules precisely deliver nutrition, reduce waste, and improve growth for higher efficiency.
-          </p>
-        </section>
+        <Link href="/feeding" className="block">
+          <section className="bg-white rounded-xl border border-gray-200 shadow p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow cursor-pointer">
+            <Image src="/window.svg" alt="Automated Feed System" width={72} height={72} className="mb-4" priority />
+            <h2 className="text-xl font-bold mb-2">Automated Feed System</h2>
+            <p className="text-gray-600">
+              AI-driven feeding schedules precisely deliver nutrition, reduce waste, and improve growth for higher efficiency.
+            </p>
+          </section>
+        </Link>
+
 
         {/* Feature 3: Disease Identifier */}
         <section className="bg-white rounded-xl border border-gray-200 shadow p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
